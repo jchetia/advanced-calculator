@@ -6,3 +6,6 @@ An advanced, responsive calculator designed to perform scientific calculations a
 - HTML
 - CSS
 - JavaScript
+
+## Live Demo
+[View Advanced Calculator](https://jchetia.github.io/advanced-calculator/)
