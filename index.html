@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neumorphism Advanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@14.0.1/lib/browser/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/nerdamer@1.1.13/all.min.js"></script>
+</head>
+
+<body>
+
+<div class="calculator-container">
+
+    <header class="header">
+        <h1>Advanced Calculator</h1>
+        <p>Scientific & Real-World Mathematics</p>
+
+        <div class="mode">
+            <span id="modeText">LIGHT MODE</span>
+            <label class="toggle">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
+
+    <main class="calculator">
+
+        <section class="basic-section">
+            <h2>Scientific Calculator</h2>
+
+            <div class="display">
+                <div id="history"></div>
+                <input type="text" id="display" value="0" readonly>
+            </div>
+
+            <div class="angle-setting">
+                <button id="angleMode">DEG</button>
+                <button id="clear">Clear</button>
+            </div>
+
+            <div class="scientific-buttons">
+                <button data-insert="sin(">sin</button>
+                <button data-insert="cos(">cos</button>
+                <button data-insert="tan(">tan</button>
+                <button data-insert="log10(">log</button>
+                <button data-insert="log(">ln</button>
+
+                <button data-insert="sqrt(">√</button>
+                <button data-insert="^2">x²</button>
+                <button data-insert="^3">x³</button>
+                <button data-insert="^">xʸ</button>
+                <button data-action="factorial">x!</button>
+
+                <button data-insert="(">(</button>
+                <button data-insert=")">)</button>
+                <button data-insert="pi">π</button>
+                <button data-insert="e">e</button>
+                <button data-action="reciprocal">1/x</button>
+            </div>
+
+            <div class="buttons">
+                <button class="function" data-action="clear">AC</button>
+                <button class="function" data-action="delete">DEL</button>
+                <button class="function" data-action="percent">%</button>
+                <button class="operator" data-insert="/">÷</button>
+
+                <button data-insert="7">7</button>
+                <button data-insert="8">8</button>
+                <button data-insert="9">9</button>
+                <button class="operator" data-insert="*">×</button>
+
+                <button data-insert="4">4</button>
+                <button data-insert="5">5</button>
+                <button data-insert="6">6</button>
+                <button class="operator" data-insert="-">−</button>
+
+                <button data-insert="1">1</button>
+                <button data-insert="2">2</button>
+                <button data-insert="3">3</button>
+                <button class="operator" data-insert="+">+</button>
+
+                <button data-action="sign">+/-</button>
+                <button data-insert="0">0</button>
+                <button data-insert=".">.</button>
+                <button class="equal" data-action="calculate">=</button>
+            </div>
+        </section>
+
+        <section class="real-world">
+
+            <div class="section-heading">
+                <h2>Real-World Problem Solver</h2>
+                <p>Choose a mathematics category</p>
+            </div>
+
+            <div class="category-grid">
+                <button class="category active" data-module="finance">💰 Finance</button>
+                <button class="category" data-module="physics">⚡ Physics</button>
+                <button class="category" data-module="geometry">📐 Geometry</button>
+                <button class="category" data-module="statistics">📊 Statistics</button>
+                <button class="category" data-module="engineering">⚙️ Engineering</button>
+                <button class="category" data-module="algebra">🔢 Algebra</button>
+            </div>
+
+            <div class="solver-panel">
+
+                <h3 id="moduleTitle">Finance Calculator</h3>
+                <button type="button" id="clearSolver" class="clear-solver">
+        Clear
+    </button>
+
+                <label for="operation">Select operation</label>
+                <select id="operation"></select>
+
+                <form id="solverForm">
+                    <div id="inputFields"></div>
+                    <button type="submit" class="solve-button">Calculate Result</button>
+                </form>
+
+                <div class="result-box">
+                    <h3>Result</h3>
+                    <div id="solverResult">Your answer will appear here.</div>
+                    <div id="formula"></div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+       
+
+    </main>
+
+    <footer>
+        <p>ADVANCED CALCULATOR</p>
+        <p>Scientific • Engineering • Real-World Mathematics</p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
